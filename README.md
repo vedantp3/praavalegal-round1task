@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Legal Work Platform — Floating Hero Section
+
+A pixel-perfect recreation of the "Legal Work Platform" hero section built with Next.js 16, Tailwind CSS v4, and Framer Motion.
+
+## Features
+
+- **Split Layout** — Text content on the left with floating card elements on the right
+- **Reusable FloatingCard Component** — Accepts `color`, `rotation`, `icon`, and `label` props with a `portal` variant for the John Doe message card
+- **Smooth Entrance Animations** — Staggered fade-in and slide-up transitions powered by Framer Motion
+- **Floating Motion** — Each card gently bobs up and down with unique timing offsets
+- **Hover Effects** — Cards scale up and shift rotation on hover with a glow shadow
+- **Background Blobs** — Soft, animated radial gradient blobs that drift slowly behind the content
+- **Decorative Bars** — Subtle horizontal pill shapes scattered across the background matching the reference design
+- **Responsive Layout** — Adapts gracefully from desktop to mobile viewports
+- **Typography** — Plus Jakarta Sans from Google Fonts with proper heading hierarchy
+
+## Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| Next.js 16 (App Router) | Framework |
+| Tailwind CSS v4 | Styling |
+| Framer Motion | Animations |
+| Lucide React | Icons |
+| TypeScript | Type safety |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the hero section.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── globals.css             # Design tokens and base styles
+│   ├── layout.tsx              # Root layout with font loading
+│   └── page.tsx                # Home page
+├── components/
+│   ├── FloatingCard.tsx        # Reusable pill card (color, rotation, icon, variant)
+│   ├── PortalCardContent.tsx   # John Doe portal card inner layout
+│   ├── BackgroundBlobs.tsx     # Animated blobs and decorative bars
+│   └── HeroSection.tsx         # Main hero section assembling all components
+```
